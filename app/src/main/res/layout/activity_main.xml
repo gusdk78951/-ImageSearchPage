@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,70 +9,79 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-    </FrameLayout>
 
-    <ImageButton
-        android:id="@+id/image_button_home"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitXY"
-        android:src="@drawable/home"
-        app:tint="#A04F4F"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CBCBCB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="검색 결과"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        android:textColor="#A04F4F"
-        app:layout_constraintEnd_toEndOf="@+id/image_button_home"
-        app:layout_constraintStart_toStartOf="@+id/image_button_home"
-        app:layout_constraintTop_toBottomOf="@+id/image_button_home" />
+        <ImageButton
+            android:id="@+id/image_button_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#A04F4F" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
-        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색 결과"
+            android:textColor="#A04F4F"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/image_button_home"
+            app:layout_constraintStart_toStartOf="@+id/image_button_home"
+            app:layout_constraintTop_toBottomOf="@+id/image_button_home" />
 
-    <ImageButton
-        android:id="@+id/image_button_folder"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/folder"
-        android:background="#00FFFFFF"
-        android:scaleType="fitXY"
-        app:tint="#A04F4F"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+        <ImageButton
+            android:id="@+id/image_button_folder"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/folder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#A04F4F" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="내 보관함"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        android:textColor="#A04F4F"
-        app:layout_constraintEnd_toEndOf="@+id/image_button_folder"
-        app:layout_constraintStart_toStartOf="@+id/image_button_folder"
-        app:layout_constraintTop_toBottomOf="@+id/image_button_folder" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 보관함"
+            android:textColor="#A04F4F"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/image_button_folder"
+            app:layout_constraintStart_toStartOf="@+id/image_button_folder"
+            app:layout_constraintTop_toBottomOf="@+id/image_button_folder" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
