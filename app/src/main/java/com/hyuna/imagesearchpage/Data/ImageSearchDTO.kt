@@ -1,4 +1,4 @@
-package com.hyuna.imagesearchpage
+package com.hyuna.imagesearchpage.Data
 
 import com.google.gson.annotations.SerializedName
 

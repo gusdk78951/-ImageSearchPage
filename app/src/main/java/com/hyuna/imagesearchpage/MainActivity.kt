@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import com.hyuna.imagesearchpage.Save.SaveFragment
+import com.hyuna.imagesearchpage.Search.SearchFragment
 import com.hyuna.imagesearchpage.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         private fun setImageParameter(search: String){
-            val authKey = "kakaoAk 9cf48add9148d504abfa2fa30717db38"
+            val authKey = "KakaoAk 9cf48add9148d504abfa2fa30717db38"
 
             return "serviceKey" to authKey
         }
